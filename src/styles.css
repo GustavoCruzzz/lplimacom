@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+
+
 body {
   @apply bg-[#28003c] pt-20 text-white;
 }
+
