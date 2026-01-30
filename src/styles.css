@@ -17,3 +17,26 @@ body {
   animation: scroll 20s linear infinite;
 }
 
+/* Animação de Entrada (Suspension/Fade-In) */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Começa 30px abaixo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.animate-fade-up {
+  /* O 'forwards' garante que ele fique parado no final da animação */
+  animation: fadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0; /* Começa invisível para não piscar */
+}
+
+/* Classes utilitárias para dar delay nos elementos (efeito cascata) */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
