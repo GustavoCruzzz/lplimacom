@@ -6,6 +6,7 @@ import { Clientes } from './components/clientes/clientes';
 import { Depoimentos } from './components/depoimentos/depoimentos';
 import { Footer } from './components/footer/footer';
 import { SocialMedia } from './components/social-media/social-media';
+import { QuemSomos } from './components/quem-somos/quem-somos';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { SocialMedia } from './components/social-media/social-media';
   imports: [
     NavbarComponent,
     Hero,
+    QuemSomos,
     Servicos,
     Clientes,
     Depoimentos,
