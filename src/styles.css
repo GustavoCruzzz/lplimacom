@@ -2,12 +2,6 @@
 
 @import "tailwindcss";
 
-
-
-body {
-  @apply bg-[#1a0b2e] text-white;
-}
-
 /* No seu styles.css ou definição do Tailwind */
 @keyframes scroll {
   0% { transform: translateX(0); }
