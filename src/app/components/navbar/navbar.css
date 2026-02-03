@@ -1,0 +1,52 @@
+/* =========================================
+   Animações do Menu Mobile Premium
+   ========================================= */
+
+/* 1. A Animação do Container Principal (O fundo de vidro roxo) */
+/* Vamos deixar ele aparecer um pouco mais rápido para dar palco aos itens */
+@keyframes menuContainerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    backdrop-filter: blur(16px); /* Garante o blur no final */
+  }
+}
+
+.animate-menu-container {
+  /* Mais rápido (0.2s) para o fundo aparecer logo */
+  animation: menuContainerFadeIn 0.2s ease-out forwards;
+}
+
+
+/* 2. A Nova Animação dos ITENS (Caindo em cascata) */
+@keyframes menuItemFall {
+  0% {
+    opacity: 0;
+    /* Começa mais acima e levemente rotacionado para dar estilo */
+    transform: translateY(-30px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    /* Termina na posição natural */
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+/* Classe base para todos os itens da lista */
+.mobile-item-animated {
+  opacity: 0; /* Garante que começa invisível antes do delay */
+  /* 0.5s de duração, com uma curva "back-out" suave para um efeito premium de "assentamento" */
+  animation: menuItemFall 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Classes utilitárias de atraso (Stagger) */
+/* Cada item vai esperar um pouco mais que o anterior */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
